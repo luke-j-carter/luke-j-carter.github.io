@@ -4,41 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luke Carter | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
       line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
-      background-color: #333;
+      background-color: #1e1e1e;
       color: #fff;
       padding: 2rem 0;
       text-align: center;
+      animation: slideDown 1s ease-in-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 1s ease-in;
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     h1, h2 {
-      color: #222;
+      color: #ffffff;
     }
     a {
-      color: #007acc;
+      color: #64b5f6;
       text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 20px;
     }
     footer {
       text-align: center;
       padding: 2rem 0;
-      background-color: #333;
-      color: #fff;
+      background-color: #1e1e1e;
+      color: #888;
+    }
+    img.logo {
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -64,12 +93,14 @@
 
     <section id="experience">
       <h2>💼 Work Experience</h2>
-      <p><strong>Disney Intern</strong><br>
-      Walt Disney World Company – Lake Buena Vista, Florida<br>
-      May 2023 – May 2024</p>
+      <p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Walt_Disney_Pictures_2011_logo.svg/320px-Walt_Disney_Pictures_2011_logo.svg.png" alt="Disney Logo" class="logo" />
+        <strong>Disney Intern</strong><br>
+        Walt Disney World Company – Lake Buena Vista, Florida<br>
+        May 2023 – May 2024
+      </p>
       <ul>
-        <li>Accepted in the Disney College Program, a selective internship with over 20,000 applicants</li>
-        <li><a href="https://jobs.disneycareers.com/disney-programs#learning" target="_blank">Learn about the program</a></li>
+        <li>Accepted in the <a href="https://jobs.disneycareers.com/disney-programs#learning" target="_blank">Disney College Program</a>, a selective internship with over 20,000 applicants</li>
         <li>Promoted to Supervisor</li>
         <li>Maintained superior guest satisfaction standards</li>
         <li>Performed Inventory Control and reported on Resort Technical Maintenance</li>
@@ -79,8 +110,8 @@
     <section id="certifications">
       <h2>🧾 Certifications</h2>
       <ul>
-        <li>✅ C++ Certified Associate Programmer (CPA) – C++ Institute</li>
-        <li>🎮 Unreal Engine Blueprint & C++ Developer Certification – Epic Games</li>
+        <li><a href="https://cppinstitute.org/certification/cpa/">✅ C++ Certified Associate Programmer (CPA)</a> – C++ Institute</li>
+        <li><a href="https://www.unrealengine.com/en-US/certification">🎮 Unreal Engine Blueprint & C++ Developer Certification</a> – Epic Games</li>
       </ul>
     </section>
 
@@ -96,7 +127,7 @@
       <h2>📫 Contact</h2>
       <p><strong>Phone:</strong> (501) 765-0205</p>
       <p><strong>Email:</strong> <a href="mailto:lcarter8@cub.uca.edu">lcarter8@cub.uca.edu</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luke-carter-9081b030a/" target="_blank">LukeCarter</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/LukeCarter" target="_blank">LukeCarter</a></p>
     </section>
   </main>
 
