@@ -2,130 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Luke Carter | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Times New Roman', sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #121212;
       color: #e0e0e0;
       line-height: 1.6;
-      animation: fadeIn 1s ease-in;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+
     header {
       background-color: #1e1e1e;
       color: #fff;
-      padding: 2rem 0;
+      padding: 2rem 1rem;
       text-align: center;
-      animation: slideDown 1s ease-in-out;
     }
-    @keyframes slideDown {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+
+    header img.pixel-art {
+      width: 150px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 1rem;
     }
+
     main {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
+
     section {
       margin-bottom: 2.5rem;
-      animation: fadeInUp 1s ease-in;
     }
-    @keyframes fadeInUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+
     h1, h2 {
-  color: #ffffff;
-}
-
-h1 {
-  animation: floatText 3s ease-in-out infinite alternate;
-}
-
-@keyframes floatText {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-5px);
-  }
-}
+      color: #ffffff;
+    }
 
     a {
       color: #64b5f6;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     ul {
       padding-left: 20px;
     }
+
     footer {
       text-align: center;
       padding: 2rem 0;
       background-color: #1e1e1e;
       color: #888;
     }
-    img.logo {
-      height: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
+
+    html {
+      scroll-behavior: smooth;
     }
-    .invisible {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.invisible {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-html {
-  scroll-behavior: smooth;
-}
-
-
   </style>
 </head>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  });
-
-  document.querySelectorAll('.reveal').forEach(section => {
-    section.classList.add('invisible');
-    observer.observe(section);
-  });
-</script>
 <body>
   <header>
+    <img src="A_pixel_art_portrait_depicts_a_young_man_with_curl.png" alt="Pixel Art Portrait of Luke Carter" class="pixel-art">
     <h1>Luke Carter</h1>
     <p>Computer Science Student | Game Developer | C++ Developer</p>
   </header>
@@ -186,20 +133,5 @@ html {
   <footer>
     <p>&copy; 2025 Luke Carter. All rights reserved.</p>
   </footer>
-  <script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  });
-
-  document.querySelectorAll('.reveal').forEach(section => {
-    section.classList.add('invisible');
-    observer.observe(section);
-  });
-</script>
-
 </body>
 </html>
