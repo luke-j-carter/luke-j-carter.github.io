@@ -68,11 +68,20 @@
     html {
       scroll-behavior: smooth;
     }
+    .profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #64b5f6;
+  margin-bottom: 1rem;
+}
+
   </style>
 </head>
 <body>
   <header>
-    <img src="IMG_6152.jpg" alt="Portrait of Luke Carter" class="Portrait">
+    <img src="IMG_6152.jpg" alt="Portrait of Luke Carter" class="profile-pic">
     <h1>Luke Carter</h1>
     <p>Computer Science Student | Game Developer | C++ Developer</p>
   </header>
@@ -82,6 +91,35 @@
       <h2>Welcome to My Profile!</h2>
       <p>I'm a passionate Computer Science student graduating in Spring 2026, currently exploring the intersection of game development, C++, and Unreal Engine. I enjoy building games, solving problems, and continuously learning new technologies.</p>
     </section>
+    
+<section id="gamedev">
+  <h2>🎮 Game Development</h2>
+  <p>I'm currently working on several game prototypes, each exploring different genres and gameplay systems. Below are examples with animated sprite placeholders that will be updated with actual project art.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+    
+    <div style="text-align: center;">
+      <img src="sprites/action-prototype.gif" alt="Third-Person Action Sprite" style="width: 128px; height: auto;">
+      <p><strong>Third-Person Action</strong><br>Combat mechanics & player movement</p>
+    </div>
+
+    <div style="text-align: center;">
+      <img src="sprites/strategy-game.gif" alt="Strategy Game Sprite" style="width: 128px; height: auto;">
+      <p><strong>Strategy Game</strong><br>Turn-based tactics and AI logic</p>
+    </div>
+
+    <div style="text-align: center;">
+      <img src="sprites/multiplayer-mini.gif" alt="Multiplayer Minigame Sprite" style="width: 128px; height: auto;">
+      <p><strong>Multiplayer Minigame</strong><br>Small-scale competitive gameplay</p>
+    </div>
+
+    <div style="text-align: center;">
+      <img src="sprites/gameplay-system.gif" alt="Gameplay System Sprite" style="width: 128px; height: auto;">
+      <p><strong>Gameplay Systems</strong><br>Inventory, dialogue, and UI</p>
+    </div>
+
+  </div>
+</section>
 
     <section id="education">
       <h2>Education</h2>
