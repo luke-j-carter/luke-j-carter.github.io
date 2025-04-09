@@ -93,6 +93,21 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
+.invisible {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
   </style>
 </head>
 <script>
@@ -171,5 +186,20 @@ h1 {
   <footer>
     <p>&copy; 2025 Luke Carter. All rights reserved.</p>
   </footer>
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.reveal').forEach(section => {
+    section.classList.add('invisible');
+    observer.observe(section);
+  });
+</script>
+
 </body>
 </html>
