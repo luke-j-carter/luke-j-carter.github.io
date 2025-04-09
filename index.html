@@ -46,8 +46,22 @@
       to { transform: translateY(0); opacity: 1; }
     }
     h1, h2 {
-      color: #ffffff;
-    }
+  color: #ffffff;
+}
+
+h1 {
+  animation: floatText 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
     a {
       color: #64b5f6;
       text-decoration: none;
@@ -69,8 +83,32 @@
       vertical-align: middle;
       margin-right: 10px;
     }
+    .invisible {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
   </style>
 </head>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.reveal').forEach(section => {
+    section.classList.add('invisible');
+    observer.observe(section);
+  });
+</script>
 <body>
   <header>
     <h1>Luke Carter</h1>
